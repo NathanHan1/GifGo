@@ -1,7 +1,8 @@
 {
-  "name": "pic-get",
+  "name": "gif-go",
   "version": "0.1.0",
   "private": true,
+  "main": "main/index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -16,10 +17,21 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "commit": "git-cz",
+    "commit:amend": "git commit --amend --no-edit",
+    "start:html": "react-app-rewired start",
+    "build:html": "react-app-rewired build",
+    "format": "pretty-quick --staged",
+    "lint": "tslint --project tsconfig.json",
+    "watch": "nodemon --delay 10ms --watch main --exec electron .",
+    "start": "cross-env NODE_ENV=development concurrently \"yarn start:html\" \"tsc --watch\" \" yarn watch \"",
+    "build": "TODO"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn check --integrity && yarn format && yarn lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +47,29 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2",
+    "customize-cra": "^0.9.1",
+    "cz-conventional-changelog": "^3.1.0",
+    "electron": "^8.2.3",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.1.7",
+    "node-sass": "^4.14.0",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "react-app-rewired": "^2.1.5",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^5.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

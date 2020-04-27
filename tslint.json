@@ -1,0 +1,25 @@
+{
+  "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
+  "rules": {
+    "no-console": [true, "debug", "log", "time", "timeEnd", "trace"],
+    "no-empty-interface": false,
+    "no-eval": true,
+    "no-implicit-dependencies": false,
+    "no-internal-module": true,
+    "no-namespace": true,
+    "no-reference": true,
+    "no-shadowed-variable": true,
+    "no-string-literal": true,
+    "no-submodule-imports": false,
+    "no-trailing-whitespace": true,
+    "no-unused-expression": true,
+    "no-var-keyword": true,
+    "variable-name": [
+      true,
+      "allow-leading-underscore",
+      "ban-keywords",
+      "check-format",
+      "allow-pascal-case"
+    ]
+  }
+}
