@@ -1,0 +1,10 @@
+@import './styles/common.scss';
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  background: $background-color;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}

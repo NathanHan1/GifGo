@@ -3,19 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "main": "main/index.js",
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
-  },
   "scripts": {
     "commit": "git-cz",
     "commit:amend": "git commit --amend --no-edit",
@@ -25,8 +12,7 @@
     "lint": "tslint --project tsconfig.json",
     "watch": "nodemon --delay 10ms --watch main --exec electron .",
     "start": "cross-env NODE_ENV=development concurrently \"yarn start:html\" \"tsc --watch\" \" yarn watch \"",
-    "build": "TODO",
-    "test": "pretty-quick --help"
+    "build": "electron-builder"
   },
   "husky": {
     "hooks": {
@@ -48,6 +34,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "electron-builder": "^22.6.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "typescript": "~3.7.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",

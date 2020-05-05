@@ -1,0 +1,53 @@
+@import '../styles/common.scss';
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .tabs {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+    font-weight: 500;
+    color: $text-normal-color;
+    .tab {
+      flex: 1;
+      cursor: pointer;
+      transition: 0.1s;
+      &:hover {
+        color: $text-active-color;
+      }
+      &Active {
+        color: $text-active-color;
+      }
+    }
+  }
+  .overview {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 70px;
+    text-align: center;
+    color: $text-normal-color;
+    font-size: 18px;
+    .hotKey {
+      margin: 0 8px;
+      display: inline-block;
+      height: 30px;
+      padding: 0 20px;
+      background-color: $title-color;
+      border-radius: 2px;
+      line-height: 30px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.1s;
+      &Edit {
+        background: $text-normal-color;
+        color: $title-color;
+      }
+    }
+  }
+}

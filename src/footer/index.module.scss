@@ -1,0 +1,14 @@
+@import '../styles/common.scss';
+
+.footer {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 14px;
+  color: $text-normal-color;
+  .designer {
+    cursor: pointer;
+    color: $text-active-color;
+  }
+}

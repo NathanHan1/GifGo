@@ -2,13 +2,10 @@ import { app, BrowserWindow } from 'electron';
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 1200,
-    height: 860,
-    frame: false,
-    // transparent: true,
-    // webPreferences: {
-    //   nodeIntegration: true,
-    // },
+    width: 800,
+    height: 600,
+    maximizable: false,
+    opacity: 0.95,
   });
 
   if (process.env.NODE_ENV === 'development') {

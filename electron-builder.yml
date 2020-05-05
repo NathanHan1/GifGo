@@ -1,0 +1,43 @@
+appId: com.gifgo.nathanhan
+productName: GifGo
+asar: false
+files:
+  - main
+  - build
+
+publish:
+    # provider: 'generic'
+    # url: 'http://static.codemao.cn/wood/client/production'
+
+mac:
+  icon: icons/logo.icns
+  fileAssociations:
+    - ext: hex
+      icon: icons/hex.icns
+    - ext: py
+      icon: icons/py.icns
+  target: 
+    - zip
+    - dmg
+
+dmg:
+  icon: icons/logo.icns
+
+win:
+  icon: icons/logo.ico
+  fileAssociations:
+  - ext: hex
+    icon: icons/hex.ico
+  - ext: py
+    icon: icons/py.ico
+  target: nsis
+  rfc3161TimeStampServer: http://timestamp.comodoca.com/rfc3161
+  timeStampServer: http://timestamp.digicert.com
+  publisherName: Shenzhen Dianmao Technology Company Limited
+
+nsis:
+  perMachine: true
+  include: config/installer_prod.nsh
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: GifGo
