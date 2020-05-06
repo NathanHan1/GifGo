@@ -12,3 +12,4 @@ const Footer = React.memo(() => {
 });
 
 export default Footer;
+
