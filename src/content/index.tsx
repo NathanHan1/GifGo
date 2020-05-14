@@ -83,7 +83,7 @@ const ScreenRecording = React.memo(() => {
   const hotKeys = ['command', 'F5'];
 
   const handlePress = () => {
-    // TODO
+    // TODO hehe
   };
 
   return (
